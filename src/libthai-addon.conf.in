@@ -1,0 +1,7 @@
+[Addon]
+Name=LibThai Addon of Fcitx
+Category=InputMethod
+Library=libthai
+Type=SharedLibrary
+OnDemand=True
+Configurable=True
