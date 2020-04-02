@@ -1,15 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the fcitx5-kkc package.
+# This file is distributed under the same license as the fcitx5-libthai package.
 #
 # Translators:
+# csslayer <wengxt@gmail.com>, 2020
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-03-11 16:45-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2020-04-02 00:02-0700\n"
+"PO-Revision-Date: 2020-04-01 16:17+0000\n"
+"Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/fcitx/teams/12005/"
 "zh_CN/)\n"
 "Language: zh_CN\n"
@@ -18,48 +20,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/engine.h:36
+#: src/engine.h:37
 msgid "Basic check"
-msgstr ""
+msgstr "基本检查"
 
-#: src/engine.h:42
-#, fuzzy
+#: src/engine.h:43
 msgid "Correction"
-msgstr "自动纠正"
-
-#: src/engine.h:33
-msgid "KETMANEE"
-msgstr ""
-
-#: src/engine.h:41
-msgid "Keyboard Map"
-msgstr ""
-
-#: src/libthai-addon.conf.in:3
-#, fuzzy
-msgid "LibThai Addon of Fcitx"
-msgstr "Fcitx 的 Kkc 组件"
-
-#: src/engine.h:33
-msgid "PATTACHOTE"
-msgstr ""
-
-#: src/engine.h:35
-msgid "Passthrough"
-msgstr ""
-
-#: src/engine.h:36
-msgid "Strict"
-msgstr ""
-
-#: src/engine.h:44
-msgid "Strictness"
-msgstr ""
+msgstr "纠错"
 
 #: src/engine.h:34
+msgid "KETMANEE"
+msgstr "KETMANEE"
+
+#: src/engine.h:42
+msgid "Keyboard Map"
+msgstr "键盘映射"
+
+#: src/libthai-addon.conf.in:3
+msgid "LibThai Addon of Fcitx"
+msgstr "泰语附加组件"
+
+#: src/engine.h:34
+msgid "PATTACHOTE"
+msgstr "PATTACHOTE"
+
+#: src/engine.h:36
+msgid "Passthrough"
+msgstr "不检查"
+
+#: src/engine.h:37
+msgid "Strict"
+msgstr "严格"
+
+#: src/engine.h:45
+msgid "Strictness"
+msgstr "严格程度"
+
+#: src/engine.h:35
 msgid "TIS820_2538"
-msgstr ""
+msgstr "TIS820_2538"
 
 #: src/libthai.conf.in:3
 msgid "Thai"
-msgstr ""
+msgstr "泰语"
