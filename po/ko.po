@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the fcitx5-libthai package.
 #
 # Translators:
-# MarongHappy <daemul72@gmail.com>, 2020
+# JungHee Lee <daemul72@gmail.com>, 2020
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-04-03 00:02-0700\n"
+"POT-Creation-Date: 2020-11-02 15:55-0800\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
-"Last-Translator: MarongHappy <daemul72@gmail.com>, 2020\n"
+"Last-Translator: JungHee Lee <daemul72@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/engine.h:37
+#: src/engine.h:26
 msgid "Basic check"
 msgstr "기본 확인"
 
-#: src/engine.h:43
+#: src/engine.h:32
 msgid "Correction"
 msgstr "교정"
 
-#: src/engine.h:34
+#: src/engine.h:23
 msgid "KETMANEE"
 msgstr "KETMANEE"
 
-#: src/engine.h:42
+#: src/engine.h:31
 msgid "Keyboard Map"
 msgstr "키보드 맵"
 
@@ -39,26 +39,30 @@ msgstr "키보드 맵"
 msgid "LibThai Addon of Fcitx"
 msgstr "Fcitx의 LibThai 애드온"
 
-#: src/engine.h:34
+#: src/engine.h:23
 msgid "PATTACHOTE"
 msgstr "PATTACHOTE"
 
-#: src/engine.h:36
+#: src/engine.h:25
 msgid "Passthrough"
 msgstr "통과"
 
-#: src/engine.h:37
+#: src/engine.h:26
 msgid "Strict"
 msgstr "엄격한"
 
-#: src/engine.h:45
+#: src/engine.h:34
 msgid "Strictness"
 msgstr "엄격함"
 
-#: src/engine.h:35
+#: src/engine.h:24
 msgid "TIS820_2538"
 msgstr "TIS820_2538"
 
-#: src/libthai.conf.in:3
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:7 src/libthai.conf.in:3
 msgid "Thai"
 msgstr "태국어"
+
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:8
+msgid "Thai language input method"
+msgstr ""

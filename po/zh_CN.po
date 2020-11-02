@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-04-02 00:02-0700\n"
+"POT-Creation-Date: 2020-11-02 15:55-0800\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: csslayer <wengxt@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/fcitx/teams/12005/"
@@ -20,19 +20,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/engine.h:37
+#: src/engine.h:26
 msgid "Basic check"
 msgstr "基本检查"
 
-#: src/engine.h:43
+#: src/engine.h:32
 msgid "Correction"
 msgstr "纠错"
 
-#: src/engine.h:34
+#: src/engine.h:23
 msgid "KETMANEE"
 msgstr "KETMANEE"
 
-#: src/engine.h:42
+#: src/engine.h:31
 msgid "Keyboard Map"
 msgstr "键盘映射"
 
@@ -40,26 +40,30 @@ msgstr "键盘映射"
 msgid "LibThai Addon of Fcitx"
 msgstr "泰语附加组件"
 
-#: src/engine.h:34
+#: src/engine.h:23
 msgid "PATTACHOTE"
 msgstr "PATTACHOTE"
 
-#: src/engine.h:36
+#: src/engine.h:25
 msgid "Passthrough"
 msgstr "不检查"
 
-#: src/engine.h:37
+#: src/engine.h:26
 msgid "Strict"
 msgstr "严格"
 
-#: src/engine.h:45
+#: src/engine.h:34
 msgid "Strictness"
 msgstr "严格程度"
 
-#: src/engine.h:35
+#: src/engine.h:24
 msgid "TIS820_2538"
 msgstr "TIS820_2538"
 
-#: src/libthai.conf.in:3
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:7 src/libthai.conf.in:3
 msgid "Thai"
 msgstr "泰语"
+
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:8
+msgid "Thai language input method"
+msgstr ""

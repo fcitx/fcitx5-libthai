@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-03-11 16:45-0700\n"
+"POT-Creation-Date: 2020-11-02 15:55-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/engine.h:36
+#: src/engine.h:26
 msgid "Basic check"
 msgstr ""
 
-#: src/engine.h:42
+#: src/engine.h:32
 msgid "Correction"
 msgstr ""
 
-#: src/engine.h:33
+#: src/engine.h:23
 msgid "KETMANEE"
 msgstr ""
 
-#: src/engine.h:41
+#: src/engine.h:31
 msgid "Keyboard Map"
 msgstr ""
 
@@ -35,26 +35,30 @@ msgstr ""
 msgid "LibThai Addon of Fcitx"
 msgstr ""
 
-#: src/engine.h:33
+#: src/engine.h:23
 msgid "PATTACHOTE"
 msgstr ""
 
-#: src/engine.h:35
+#: src/engine.h:25
 msgid "Passthrough"
 msgstr ""
 
-#: src/engine.h:36
+#: src/engine.h:26
 msgid "Strict"
 msgstr ""
 
-#: src/engine.h:44
+#: src/engine.h:34
 msgid "Strictness"
 msgstr ""
 
-#: src/engine.h:34
+#: src/engine.h:24
 msgid "TIS820_2538"
 msgstr ""
 
-#: src/libthai.conf.in:3
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:7 src/libthai.conf.in:3
 msgid "Thai"
+msgstr ""
+
+#: org.fcitx.fcitx5-libthai.metainfo.xml.in:8
+msgid "Thai language input method"
 msgstr ""
