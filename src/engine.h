@@ -89,6 +89,7 @@ private:
 class LibThaiFactory : public AddonFactory {
 public:
     AddonInstance *create(AddonManager *manager) override {
+        registerDomain("fcitx5-libthai", FCITX_INSTALL_LOCALEDIR);
         return new LibThaiEngine(manager->instance());
     }
 };
