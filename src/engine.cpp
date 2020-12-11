@@ -120,7 +120,8 @@ LibThaiEngine::LibThaiEngine(Instance *instance)
     if (!convFromUtf8_ || !convToUtf8_) {
         throw std::runtime_error("Failed to open iconv for libthai");
     }
-    instance->inputContextManager().registerProperty("libthaiState", &factory_);
+    instance_->inputContextManager().registerProperty("libthaiState",
+                                                      &factory_);
     reloadConfig();
 }
 
