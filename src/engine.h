@@ -16,7 +16,6 @@
 #include <fcitx/inputcontextproperty.h>
 #include <fcitx/inputmethodengine.h>
 #include <fcitx/instance.h>
-#include <iconv.h>
 #include <thai/thinp.h>
 
 namespace fcitx {

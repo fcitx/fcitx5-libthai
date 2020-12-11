@@ -21,33 +21,6 @@ FCITX_DEFINE_LOG_CATEGORY(libthai_log, "libthai");
 
 constexpr auto FALLBACK_BUFF_SIZE = 4;
 
-std::vector<uint8_t> tryConvert(iconv_t conv, std::string_view s) {
-    for (auto iter = std::begin(s), e = std::end(s); iter != e;
-         iter = utf8::nextChar(iter)) {
-        std::vector<uint8_t> result;
-        result.resize(s.size() * 10);
-        size_t byteLength = s.size();
-        size_t byteRemains = result.size();
-        char *data = const_cast<char *>(s.data());
-        char *outData = reinterpret_cast<char *>(result.data());
-        auto err = iconv(conv, &data, &byteLength, &outData, &byteRemains);
-        if (err == static_cast<size_t>(-1)) {
-            continue;
-        }
-        byteLength = 0;
-        err = iconv(conv, nullptr, &byteLength, &outData, &byteRemains);
-        if (err == static_cast<size_t>(-1)) {
-            continue;
-        }
-        if (data != s.data() + s.size()) {
-            continue;
-        }
-        result.resize(result.size() - byteRemains);
-        return result;
-    }
-    return {};
-}
-
 class LibThaiState : public InputContextProperty {
 public:
     LibThaiState(LibThaiEngine *engine, InputContext &ic)
