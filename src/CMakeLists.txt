@@ -1,5 +1,6 @@
 
 add_library(iconvwrapper STATIC iconvwrapper.cpp)
+set_target_properties(iconvwrapper PROPERTIES POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(iconvwrapper Fcitx5::Utils Iconv::Iconv)
 
 set(LIBTHAI_SOURCES
