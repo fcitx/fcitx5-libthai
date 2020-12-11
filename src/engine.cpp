@@ -63,9 +63,8 @@ public:
     }
 
     bool commitString(thchar_t *chr, size_t length) {
-        auto s =
-            tryConvert(engine_->convToUtf8(),
-                       std::string_view(reinterpret_cast<char *>(chr), length));
+        auto s = engine_->convToUtf8().tryConvert(
+            std::string_view(reinterpret_cast<char *>(chr), length));
         if (s.empty()) {
             return false;
         }
@@ -100,7 +99,7 @@ public:
                 text = text.substr(byte);
             }
             LIBTHAI_DEBUG() << "SurroundingText is: " << text;
-            return tryConvert(engine_->convFromUtf8(), text);
+            return engine_->convFromUtf8().tryConvert(text);
         }
         return {buffer_.begin(), buffer_.end()};
     }

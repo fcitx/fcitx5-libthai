@@ -7,6 +7,7 @@
 #ifndef _FCITX5_LIBTHAI_ENGINE_H_
 #define _FCITX5_LIBTHAI_ENGINE_H_
 
+#include "iconvwrapper.h"
 #include "thaikb.h"
 #include <fcitx-config/iniparser.h>
 #include <fcitx-utils/i18n.h>
@@ -37,24 +38,6 @@ FCITX_CONFIGURATION(
 
 class LibThaiState;
 
-class IconvWrapper {
-public:
-    IconvWrapper(const char *from, const char *to)
-        : conv_(iconv_open(to, from)) {}
-
-    ~IconvWrapper() {
-        if (*this) {
-            iconv_close(conv_);
-        }
-    }
-
-    operator iconv_t() const { return conv_; }
-    operator bool() const { return conv_ != reinterpret_cast<iconv_t>(-1); }
-
-private:
-    iconv_t conv_;
-};
-
 class LibThaiEngine final : public InputMethodEngine {
 public:
     LibThaiEngine(Instance *instance);
@@ -75,8 +58,8 @@ public:
 
     void reloadConfig() override { readAsIni(config_, "conf/libthai.conf"); }
 
-    iconv_t convFromUtf8() const { return convFromUtf8_; }
-    iconv_t convToUtf8() const { return convToUtf8_; }
+    auto &convFromUtf8() const { return convFromUtf8_; }
+    auto &convToUtf8() const { return convToUtf8_; }
 
 private:
     Instance *instance_;
