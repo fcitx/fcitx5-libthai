@@ -14,6 +14,7 @@ set_target_properties(libthai PROPERTIES PREFIX "")
 install(TARGETS libthai DESTINATION "${CMAKE_INSTALL_LIBDIR}/fcitx5")
 fcitx5_translate_desktop_file(libthai.conf.in libthai.conf)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libthai.conf" DESTINATION "${CMAKE_INSTALL_DATADIR}/fcitx5/inputmethod")
-fcitx5_translate_desktop_file(libthai-addon.conf.in libthai-addon.conf)
+configure_file(libthai-addon.conf.in.in libthai-addon.conf.in)
+fcitx5_translate_desktop_file("${CMAKE_CURRENT_BINARY_DIR}/libthai-addon.conf.in" libthai-addon.conf)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/libthai-addon.conf" RENAME libthai.conf DESTINATION "${FCITX_INSTALL_PKGDATADIR}/addon")
 
