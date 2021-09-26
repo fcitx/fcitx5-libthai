@@ -112,7 +112,7 @@ static const unsigned char (*const thai_keycode_map[])[N_KEYCODES] = {
     ketmanee_keycode_map, pattachote_keycode_map, tis_keycode_map};
 
 unsigned char ThaiKeycodeToChar(ThaiKBMap map, int keycode, int shiftLevel) {
-    if (shiftLevel >= 3 || keycode >= N_KEYCODES) {
+    if (shiftLevel >= 3 || keycode >= N_KEYCODES || keycode < 0) {
         return 0;
     }
 

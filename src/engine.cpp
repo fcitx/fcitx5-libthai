@@ -169,8 +169,9 @@ void LibThaiEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
         ((2 == shiftLevel) || (key.states().test(KeyState::CapsLock)))) {
         newChar = key.sym() - FcitxKey_KP_0 + 0xf0;
     } else {
+        // Make sure we remove evdev offset 8 from the key code.
         newChar =
-            ThaiKeycodeToChar(*config_.keyboardMap, key.code(), shiftLevel);
+            ThaiKeycodeToChar(*config_.keyboardMap, key.code() - 8, shiftLevel);
         if (0 == newChar) {
             return;
         }
