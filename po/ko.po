@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the fcitx5-libthai package.
 #
 # Translators:
-# JungHee Lee <daemul72@gmail.com>, 2020
+# 이정희 <daemul72@gmail.com>, 2020
+# Bon Keun Seo <scobyseo@gmail.com>, 2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-11-02 15:55-0800\n"
+"POT-Creation-Date: 2021-10-17 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
-"Last-Translator: JungHee Lee <daemul72@gmail.com>, 2020\n"
+"Last-Translator: Bon Keun Seo <scobyseo@gmail.com>, 2021\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +36,7 @@ msgstr "KETMANEE"
 msgid "Keyboard Map"
 msgstr "키보드 맵"
 
-#: src/libthai-addon.conf.in:3
+#: src/libthai-addon.conf.in.in:3
 msgid "LibThai Addon of Fcitx"
 msgstr "Fcitx의 LibThai 애드온"
 
@@ -59,10 +60,10 @@ msgstr "엄격함"
 msgid "TIS820_2538"
 msgstr "TIS820_2538"
 
-#: org.fcitx.fcitx5-libthai.metainfo.xml.in:7 src/libthai.conf.in:3
+#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:3
 msgid "Thai"
 msgstr "태국어"
 
-#: org.fcitx.fcitx5-libthai.metainfo.xml.in:8
+#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:8
 msgid "Thai language input method"
-msgstr ""
+msgstr "태국어 입력기"
