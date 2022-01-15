@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2022-01-14 20:24+0000\n"
+"POT-Creation-Date: 2022-01-15 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: Ettore Atalan <atalanttore@googlemail.com>, 2022\n"
 "Language-Team: German (https://www.transifex.com/fcitx/teams/12005/de/)\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: src/engine.h:25
 msgid "Passthrough"
-msgstr ""
+msgstr "Durchleiten"
 
 #: src/engine.h:26
 msgid "Strict"
@@ -61,8 +61,8 @@ msgstr ""
 
 #: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:3
 msgid "Thai"
-msgstr ""
+msgstr "Thailändisch"
 
 #: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:8
 msgid "Thai language input method"
-msgstr ""
+msgstr "Thailändische Eingabemethode"
