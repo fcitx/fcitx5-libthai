@@ -3,16 +3,16 @@
 # This file is distributed under the same license as the fcitx5-libthai package.
 #
 # Translators:
-# 이정희 <daemul72@gmail.com>, 2020
 # Bon Keun Seo <scobyseo@gmail.com>, 2021
+# Junghee Lee <daemul72@gmail.com>, 2022
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2021-10-17 20:24+0000\n"
+"POT-Creation-Date: 2022-04-10 20:25+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
-"Last-Translator: Bon Keun Seo <scobyseo@gmail.com>, 2021\n"
+"Last-Translator: Junghee Lee <daemul72@gmail.com>, 2022\n"
 "Language-Team: Korean (https://www.transifex.com/fcitx/teams/12005/ko/)\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "PATTACHOTE"
 
 #: src/engine.h:25
 msgid "Passthrough"
-msgstr "통과"
+msgstr "경유하기"
 
 #: src/engine.h:26
 msgid "Strict"
