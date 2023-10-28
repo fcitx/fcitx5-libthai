@@ -10,7 +10,11 @@ find_package(PkgConfig REQUIRED)
 find_package(Fcitx5Core 5.0.2 REQUIRED)
 find_package(Iconv REQUIRED)
 find_package(Gettext REQUIRED)
-pkg_check_modules(LibThai IMPORTED_TARGET "libthai" REQUIRED)
+
+if (NOT DEFINED THAI_TARGET)
+    pkg_check_modules(LibThai IMPORTED_TARGET "libthai" REQUIRED)
+    set(THAI_TARGET PkgConfig::LibThai)
+endif()
 
 include("${FCITX_INSTALL_CMAKECONFIG_DIR}/Fcitx5Utils/Fcitx5CompilerSettings.cmake")
 add_definitions(-DFCITX_GETTEXT_DOMAIN=\"fcitx5-libthai\")
