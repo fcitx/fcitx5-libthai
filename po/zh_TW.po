@@ -4,15 +4,16 @@
 #
 # Translators:
 # Neko ◣ 0xFF, 2022
+# Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2022-12-16 20:25+0000\n"
+"POT-Creation-Date: 2024-07-08 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
-"Last-Translator: Neko ◣ 0xFF, 2022\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/fcitx/teams/12005/"
+"Last-Translator: Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024\n"
+"Language-Team: Chinese (Taiwan) (https://app.transifex.com/fcitx/teams/12005/"
 "zh_TW/)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +39,7 @@ msgstr "鍵盤映射"
 
 #: src/libthai-addon.conf.in.in:3
 msgid "LibThai Addon of Fcitx"
-msgstr "泰文附加組件"
+msgstr "泰文附加元件"
 
 #: src/engine.h:23
 msgid "PATTACHOTE"
@@ -66,4 +67,4 @@ msgstr "泰文"
 
 #: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:8
 msgid "Thai language input method"
-msgstr "泰文输入法"
+msgstr "泰文輸入法"
