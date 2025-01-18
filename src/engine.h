@@ -9,10 +9,16 @@
 
 #include "iconvwrapper.h"
 #include "thaikb.h"
+#include <fcitx-config/configuration.h>
+#include <fcitx-config/enum.h>
 #include <fcitx-config/iniparser.h>
+#include <fcitx-config/option.h>
+#include <fcitx-config/rawconfig.h>
 #include <fcitx-utils/i18n.h>
 #include <fcitx/addonfactory.h>
+#include <fcitx/addoninstance.h>
 #include <fcitx/addonmanager.h>
+#include <fcitx/event.h>
 #include <fcitx/inputcontextproperty.h>
 #include <fcitx/inputmethodengine.h>
 #include <fcitx/instance.h>
@@ -47,7 +53,7 @@ public:
     void keyEvent(const InputMethodEntry &entry, KeyEvent &keyEvent) override;
     void reset(const InputMethodEntry &entry,
                InputContextEvent &event) override;
-    void deactivate(const fcitx::InputMethodEntry &,
+    void deactivate(const fcitx::InputMethodEntry & /*entry*/,
                     fcitx::InputContextEvent &event) override;
     const fcitx::Configuration *getConfig() const override { return &config_; }
     void setConfig(const fcitx::RawConfig &raw) override {

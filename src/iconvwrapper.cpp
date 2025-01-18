@@ -6,8 +6,14 @@
  */
 
 #include "iconvwrapper.h"
+#include <cstddef>
+#include <cstdint>
 #include <fcitx-utils/utf8.h>
 #include <iconv.h>
+#include <iterator>
+#include <memory>
+#include <string_view>
+#include <vector>
 
 class IconvWrapperPrivate {
 public:
@@ -30,7 +36,7 @@ IconvWrapper::operator bool() const {
 }
 
 std::vector<uint8_t> IconvWrapper::tryConvert(std::string_view s) const {
-    auto conv = d_ptr->conv_;
+    iconv_t conv = d_ptr->conv_;
     for (auto iter = std::begin(s), e = std::end(s); iter != e;
          iter = fcitx::utf8::nextChar(iter)) {
         std::vector<uint8_t> result;

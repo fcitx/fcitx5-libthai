@@ -5,17 +5,37 @@
  *
  */
 #include "engine.h"
+#include "thaikb.h"
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <deque>
+#include <fcitx-utils/capabilityflags.h>
+#include <fcitx-utils/key.h>
+#include <fcitx-utils/keysym.h>
+#include <fcitx-utils/keysymgen.h>
 #include <fcitx-utils/log.h>
 #include <fcitx-utils/utf8.h>
+#include <fcitx/addoninstance.h>
+#include <fcitx/event.h>
 #include <fcitx/inputcontext.h>
 #include <fcitx/inputcontextmanager.h>
+#include <fcitx/inputmethodentry.h>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <thai/thailib.h>
 #include <thai/thcell.h>
 #include <thai/thinp.h>
+#include <vector>
 
-namespace fcitx {
+namespace {
 
 FCITX_DEFINE_LOG_CATEGORY(libthai_log, "libthai");
+
+}
+
+namespace fcitx {
 
 #define LIBTHAI_DEBUG() FCITX_LOGC(libthai_log, Debug)
 
@@ -99,11 +119,13 @@ LibThaiEngine::LibThaiEngine(Instance *instance)
 
 LibThaiEngine::~LibThaiEngine() {}
 
-void LibThaiEngine::activate(const InputMethodEntry &, InputContextEvent &) {}
+void LibThaiEngine::activate(const InputMethodEntry & /*entry*/,
+                             InputContextEvent & /*event*/) {}
 
-void LibThaiEngine::deactivate(const InputMethodEntry &, InputContextEvent &) {}
+void LibThaiEngine::deactivate(const InputMethodEntry & /*entry*/,
+                               InputContextEvent & /*event*/) {}
 
-bool isContextIntactKey(Key key) {
+static bool isContextIntactKey(Key key) {
 
     return (((key.sym() & 0xFF00) == 0xFF00) &&
             (/* IsModifierKey */
@@ -114,7 +136,7 @@ bool isContextIntactKey(Key key) {
              key.sym() <= FcitxKey_ISO_Last_Group_Lock));
 }
 
-bool isContextLostKey(Key key) {
+static bool isContextLostKey(Key key) {
 
     return ((key.sym() & 0xFF00) == 0xFF00) &&
            (key.sym() == FcitxKey_BackSpace || key.sym() == FcitxKey_Tab ||
@@ -134,12 +156,13 @@ bool isContextLostKey(Key key) {
             (FcitxKey_F1 <= key.sym() && key.sym() <= FcitxKey_F35));
 }
 
-void LibThaiEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
+void LibThaiEngine::keyEvent(const InputMethodEntry & /*entry*/,
+                             KeyEvent &keyEvent) {
     auto key = keyEvent.rawKey();
     if (keyEvent.isRelease()) {
         return;
     }
-    auto state = keyEvent.inputContext()->propertyFor(&factory_);
+    auto *state = keyEvent.inputContext()->propertyFor(&factory_);
     // If any ctrl alt super modifier is pressed, ignore.
     if (key.states().testAny(KeyStates{KeyState::Ctrl_Alt, KeyState::Super}) ||
         isContextLostKey(key)) {
@@ -187,7 +210,7 @@ void LibThaiEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
             prevChar = prevChars.back();
         }
         if (!th_isaccept(prevChar, newChar, *config_.strictness)) {
-            return keyEvent.filterAndAccept();
+             keyEvent.filterAndAccept(); return;
         }
         if (state->commitString(&newChar, 1)) {
             keyEvent.filterAndAccept();
@@ -200,14 +223,14 @@ void LibThaiEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
     state->prevCell(&contextCell);
     if (!th_validate_leveled(contextCell, newChar, &conv,
                              *config_.strictness)) {
-        return keyEvent.filterAndAccept();
+         keyEvent.filterAndAccept(); return;
     }
 
     if (conv.offset < 0) {
         // SurroundingText not supported, so just reject the key.
         if (!keyEvent.inputContext()->capabilityFlags().test(
                 CapabilityFlag::SurroundingText)) {
-            return keyEvent.filter();
+             keyEvent.filter(); return;
         }
 
         keyEvent.inputContext()->deleteSurroundingText(conv.offset,
@@ -217,15 +240,15 @@ void LibThaiEngine::keyEvent(const InputMethodEntry &, KeyEvent &keyEvent) {
     state->rememberPrevChars(newChar);
     if (state->commitString(conv.conv,
                             strlen(reinterpret_cast<char *>(conv.conv)))) {
-        return keyEvent.filterAndAccept();
+         keyEvent.filterAndAccept(); return;
     }
 }
 
-void LibThaiEngine::reset(const InputMethodEntry &, InputContextEvent &event) {
-    auto state = event.inputContext()->propertyFor(&factory_);
+void LibThaiEngine::reset(const InputMethodEntry & /*entry*/, InputContextEvent &event) {
+    auto *state = event.inputContext()->propertyFor(&factory_);
     state->forgetPrevChars();
 }
 
 } // namespace fcitx
 
-FCITX_ADDON_FACTORY(fcitx::LibThaiFactory);
+FCITX_ADDON_FACTORY_V2(libthai, fcitx::LibThaiFactory);
