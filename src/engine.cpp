@@ -210,7 +210,8 @@ void LibThaiEngine::keyEvent(const InputMethodEntry & /*entry*/,
             prevChar = prevChars.back();
         }
         if (!th_isaccept(prevChar, newChar, *config_.strictness)) {
-             keyEvent.filterAndAccept(); return;
+            keyEvent.filterAndAccept();
+            return;
         }
         if (state->commitString(&newChar, 1)) {
             keyEvent.filterAndAccept();
@@ -223,14 +224,16 @@ void LibThaiEngine::keyEvent(const InputMethodEntry & /*entry*/,
     state->prevCell(&contextCell);
     if (!th_validate_leveled(contextCell, newChar, &conv,
                              *config_.strictness)) {
-         keyEvent.filterAndAccept(); return;
+        keyEvent.filterAndAccept();
+        return;
     }
 
     if (conv.offset < 0) {
         // SurroundingText not supported, so just reject the key.
         if (!keyEvent.inputContext()->capabilityFlags().test(
                 CapabilityFlag::SurroundingText)) {
-             keyEvent.filter(); return;
+            keyEvent.filter();
+            return;
         }
 
         keyEvent.inputContext()->deleteSurroundingText(conv.offset,
@@ -240,11 +243,13 @@ void LibThaiEngine::keyEvent(const InputMethodEntry & /*entry*/,
     state->rememberPrevChars(newChar);
     if (state->commitString(conv.conv,
                             strlen(reinterpret_cast<char *>(conv.conv)))) {
-         keyEvent.filterAndAccept(); return;
+        keyEvent.filterAndAccept();
+        return;
     }
 }
 
-void LibThaiEngine::reset(const InputMethodEntry & /*entry*/, InputContextEvent &event) {
+void LibThaiEngine::reset(const InputMethodEntry & /*entry*/,
+                          InputContextEvent &event) {
     auto *state = event.inputContext()->propertyFor(&factory_);
     state->forgetPrevChars();
 }
