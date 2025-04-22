@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-03-22 20:24+0000\n"
+"POT-Creation-Date: 2025-04-22 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: hoanghuy309 <hoanghuy309@gmail.com>, 2025\n"
 "Language-Team: Vietnamese (https://app.transifex.com/fcitx/teams/12005/vi/)\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: src/engine.h:37
 msgid "Keyboard Map"
-msgstr ""
+msgstr "Bản Đồ Bàn Phím"
 
 #: src/libthai-addon.conf.in.in:2
 msgid "LibThai Addon of Fcitx"
