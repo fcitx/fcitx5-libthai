@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-09-11 20:24+0000\n"
+"POT-Creation-Date: 2025-09-12 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: Popolon_Github, 2025\n"
 "Language-Team: French (https://app.transifex.com/fcitx/teams/12005/fr/)\n"
@@ -22,27 +22,27 @@ msgstr ""
 
 #: src/engine.h:32
 msgid "Basic check"
-msgstr ""
+msgstr "Vérification basique"
 
 #: src/engine.h:38
 msgid "Correction"
-msgstr ""
+msgstr "Correction"
 
 #: src/engine.h:29
 msgid "KETMANEE"
-msgstr ""
+msgstr "KETMANEE"
 
 #: src/engine.h:37
 msgid "Keyboard Map"
-msgstr ""
+msgstr "Carte du cavier"
 
 #: src/libthai-addon.conf.in.in:2
 msgid "LibThai Addon of Fcitx"
-msgstr ""
+msgstr "Extension LibThai pour Fcitx"
 
 #: src/engine.h:29
 msgid "PATTACHOTE"
-msgstr ""
+msgstr "PATTACHOTE"
 
 #: src/engine.h:31
 msgid "Passthrough"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: src/engine.h:32
 msgid "Strict"
-msgstr ""
+msgstr "Strict"
 
 #: src/engine.h:40
 msgid "Strictness"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:2
 msgid "Thai"
-msgstr ""
+msgstr "Thaï"
 
 #: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:8
 msgid "Thai language input method"
