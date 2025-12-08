@@ -27,7 +27,7 @@
 namespace fcitx {
 
 FCITX_CONFIG_ENUM_NAME_WITH_I18N(ThaiKBMap, N_("KETMANEE"), N_("PATTACHOTE"),
-                                 N_("TIS820_2538"));
+                                 N_("TIS820_2538"), N_("Manoonchai"));
 FCITX_CONFIG_ENUM_NAME_WITH_I18N(thstrict_t, N_("Passthrough"),
                                  N_("Basic check"), N_("Strict"));
 
