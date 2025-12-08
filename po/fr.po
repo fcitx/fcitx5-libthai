@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2025-09-17 20:24+0000\n"
+"POT-Creation-Date: 2025-12-08 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: Popolon_Github, 2025\n"
 "Language-Team: French (https://app.transifex.com/fcitx/teams/12005/fr/)\n"
@@ -39,6 +39,10 @@ msgstr "Carte du cavier"
 #: src/libthai-addon.conf.in.in:2
 msgid "LibThai Addon of Fcitx"
 msgstr "Extension LibThai pour Fcitx"
+
+#: src/engine.h:30
+msgid "Manoonchai"
+msgstr ""
 
 #: src/engine.h:29
 msgid "PATTACHOTE"

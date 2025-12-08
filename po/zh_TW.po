@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the fcitx5-libthai package.
 #
 # Translators:
-# Neko ◣ 0xFF, 2022
+# neko_0xff <zangmenhsu@yahoo.co.jp>, 2022
 # Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2024-07-08 20:24+0000\n"
+"POT-Creation-Date: 2025-12-08 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: Kisaragi Hiu <flyingfeather1501@gmail.com>, 2024\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/fcitx/teams/12005/"
@@ -21,47 +21,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/engine.h:26
+#: src/engine.h:32
 msgid "Basic check"
 msgstr "基本檢查"
 
-#: src/engine.h:32
+#: src/engine.h:38
 msgid "Correction"
 msgstr "糾正"
 
-#: src/engine.h:23
+#: src/engine.h:29
 msgid "KETMANEE"
 msgstr "KETMANEE"
 
-#: src/engine.h:31
+#: src/engine.h:37
 msgid "Keyboard Map"
 msgstr "鍵盤映射"
 
-#: src/libthai-addon.conf.in.in:3
+#: src/libthai-addon.conf.in.in:2
 msgid "LibThai Addon of Fcitx"
 msgstr "泰文附加元件"
 
-#: src/engine.h:23
+#: src/engine.h:30
+msgid "Manoonchai"
+msgstr ""
+
+#: src/engine.h:29
 msgid "PATTACHOTE"
 msgstr "PATTACHOTE"
 
-#: src/engine.h:25
+#: src/engine.h:31
 msgid "Passthrough"
 msgstr "不檢查"
 
-#: src/engine.h:26
+#: src/engine.h:32
 msgid "Strict"
 msgstr "嚴格"
 
-#: src/engine.h:34
+#: src/engine.h:40
 msgid "Strictness"
 msgstr "嚴格程度"
 
-#: src/engine.h:24
+#: src/engine.h:30
 msgid "TIS820_2538"
 msgstr "TIS820_2538"
 
-#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:3
+#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:2
 msgid "Thai"
 msgstr "泰文"
 

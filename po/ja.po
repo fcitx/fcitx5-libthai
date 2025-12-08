@@ -9,57 +9,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fcitx5-libthai\n"
 "Report-Msgid-Bugs-To: fcitx-dev@googlegroups.com\n"
-"POT-Creation-Date: 2020-12-05 00:03+0100\n"
+"POT-Creation-Date: 2025-12-08 20:24+0000\n"
 "PO-Revision-Date: 2020-04-01 16:17+0000\n"
 "Last-Translator: Takuro Onoue <kusanaginoturugi@gmail.com>, 2020\n"
-"Language-Team: Japanese (https://www.transifex.com/fcitx/teams/12005/ja/)\n"
+"Language-Team: Japanese (https://app.transifex.com/fcitx/teams/12005/ja/)\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/engine.h:26
+#: src/engine.h:32
 msgid "Basic check"
 msgstr "基本チェック"
 
-#: src/engine.h:32
+#: src/engine.h:38
 msgid "Correction"
 msgstr "修正"
 
-#: src/engine.h:23
+#: src/engine.h:29
 msgid "KETMANEE"
 msgstr "KETMANEE"
 
-#: src/engine.h:31
+#: src/engine.h:37
 msgid "Keyboard Map"
 msgstr "キーボードマップ"
 
-#: src/libthai-addon.conf.in:3
+#: src/libthai-addon.conf.in.in:2
 msgid "LibThai Addon of Fcitx"
 msgstr "Fcitx 用 LibThai アドオン"
 
-#: src/engine.h:23
+#: src/engine.h:30
+msgid "Manoonchai"
+msgstr ""
+
+#: src/engine.h:29
 msgid "PATTACHOTE"
 msgstr "PATTACHOTE"
 
-#: src/engine.h:25
+#: src/engine.h:31
 msgid "Passthrough"
 msgstr "パススルー"
 
-#: src/engine.h:26
+#: src/engine.h:32
 msgid "Strict"
 msgstr "厳格"
 
-#: src/engine.h:34
+#: src/engine.h:40
 msgid "Strictness"
 msgstr "厳格さ"
 
-#: src/engine.h:24
+#: src/engine.h:30
 msgid "TIS820_2538"
 msgstr "TIS820_2538"
 
-#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:3
+#: org.fcitx.Fcitx5.Addon.LibThai.metainfo.xml.in:7 src/libthai.conf.in:2
 msgid "Thai"
 msgstr "タイ語"
 
