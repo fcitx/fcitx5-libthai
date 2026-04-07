@@ -1015,7 +1015,7 @@ constexpr unsigned char manoonchai_keycode_map[N_KEYCODES][N_LEVELS] = {
         ';',
     },
     {
-        TIS_SARA_UE,
+        TIS_SARA_UEE,
         '"',
         '\'',
     },
